@@ -1,6 +1,6 @@
-# Ingeniería inversa del visor 20 de Julio
+# Diagramas del visor 20 de Julio
 
-El visor es una aplicación Streamlit que muestra comercios y sitios de interés del sector catastral 001405, en San Cristóbal, Bogotá. Los diagramas se basan en el código del commit `2d2efe3`.
+El visor permite explorar comercios y sitios de interés del sector catastral 001405, en San Cristóbal, Bogotá. Se organiza en tres componentes que coordinan la interfaz, el procesamiento de datos y la generación del mapa. El catálogo indica qué archivos y fuentes usa cada capa.
 
 | Componente | Responsabilidad |
 | --- | --- |
@@ -55,7 +55,7 @@ classDiagram
     ValueError <|-- DataError
 ```
 
-El módulo `visor.datos` aparece para identificar la función que conecta los dos modelos. [Declaración de modelos](../visor/datos.py#L36) · [Función de importación](../visor/datos.py#L174)
+La configuración de cada capa indica de dónde vienen los datos y qué campos leer. El resultado conserva los lugares aceptados y las incidencias de importación para que la interfaz pueda mostrar ambos. [Declaración de modelos](../visor/datos.py#L36) · [Función de importación](../visor/datos.py#L174)
 
 ## Diagramas de secuencia
 
@@ -161,7 +161,7 @@ flowchart LR
     actualizar --- catastro
 ```
 
-| Caso de uso | Comportamiento observado |
+| Caso de uso | Qué permite hacer el visor |
 | --- | --- |
 | Explorar y acotar la consulta | El usuario navega el mapa, muestra u oculta capas y aplica filtros por nombre o dirección, categoría y fuente. |
 | Cambiar el área de consulta | Puede incluir sitios hasta 300 m fuera del sector. La tabla distingue esos registros de los que intersectan el sector. |

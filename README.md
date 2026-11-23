@@ -2,7 +2,7 @@
 
 Aplicación Python para explorar comercios y sitios de interés del sector catastral **001405**, en San Cristóbal, Bogotá, y hasta 300 metros de cercanía opcional. Usa datos abiertos gubernamentales locales y permite importar nuevas capas oficiales.
 
-[Ingeniería inversa y diagramas del visor](docs/ingenieria-inversa.md)
+[Diagramas y funcionamiento del visor](docs/diagramas.md)
 
 El mapa no utiliza OpenStreetMap. No utiliza teselas ni servicios de mapas externos: dibuja el límite oficial, las vías oficiales y las capas disponibles. Leaflet y sus estilos están incluidos para funcionar sin conexión después de instalar las dependencias.
 
